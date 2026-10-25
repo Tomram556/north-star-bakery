@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery | Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html">
+            <img src="media/bakery-logo_c.png"
+                 alt="North Star Bakery logo"
+                 width="300">
+            <h1>North Star Bakery</h1>
+        </a>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="page-intro">
+        <div class="container">
+            <h2>Contact North Star Bakery</h2>
+            <p class="lead">
+                Have a question or want to request a pre-order? Complete the form
+                below and provide the details of your request. Our bakery team
+                will use the information you provide to respond to your inquiry.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container order-layout">
+            <div class="order-main">
+                <h2>Inquiry and Pre-Order Request</h2>
+                <!-- novalidate turns off the browser's pop-up bubbles so the
+                     JavaScript messages in js/main.js can appear under each field.
+                     The required attributes stay for meaning and screen readers. -->
+                <form class="order-form" id="order-form" action="#" method="post" novalidate>
+                    <fieldset>
+                        <legend>Contact and Request Information</legend>
+
+                        <div class="field">
+                            <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+                            <input type="text"
+                                   id="name"
+                                   name="name"
+                                   autocomplete="name"
+                                   aria-describedby="name-error"
+                                   required>
+                            <p class="error-message" id="name-error"></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   autocomplete="email"
+                                   aria-describedby="email-error"
+                                   required>
+                            <p class="error-message" id="email-error"></p>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="request-type">Request Type <span class="required" aria-hidden="true">*</span></label>
+                                <select id="request-type"
+                                        name="request-type"
+                                        aria-describedby="request-type-error"
+                                        required>
+                                    <option value="">Select a request type</option>
+                                    <option value="pre-order">Pre-Order</option>
+                                    <option value="general-question">General Question</option>
+                                </select>
+                                <p class="error-message" id="request-type-error"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="pickup-date">Pickup Date <span class="required" aria-hidden="true">*</span></label>
+                                <input type="date"
+                                       id="pickup-date"
+                                       name="pickup-date"
+                                       aria-describedby="pickup-date-hint pickup-date-error"
+                                       required>
+                                <p class="hint" id="pickup-date-hint">Pre-orders need at least 2 days' notice</p>
+                                <p class="error-message" id="pickup-date-error"></p>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="item-details">Item Details <span class="required" aria-hidden="true">*</span></label>
+                            <textarea id="item-details"
+                                      name="item-details"
+                                      rows="5"
+                                      cols="40"
+                                      maxlength="500"
+                                      aria-describedby="item-details-hint item-details-error"
+                                      required></textarea>
+                            <p class="hint" id="item-details-hint">Tell us the item, quantity, and any size or flavor. <span id="item-details-count">0 / 500</span></p>
+                            <p class="error-message" id="item-details-error"></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="allergy-notes">Allergy Notes</label>
+                            <textarea id="allergy-notes"
+                                      name="allergy-notes"
+                                      rows="4"
+                                      cols="40"
+                                      maxlength="300"
+                                      aria-describedby="allergy-notes-error"></textarea>
+                            <p class="error-message" id="allergy-notes-error"></p>
+                        </div>
+
+                        <div class="field checkbox-field">
+                            <input type="checkbox" id="remember" name="remember" checked>
+                            <label for="remember">Remember my name and email on this device</label>
+                        </div>
+
+                        <button class="btn btn-primary" type="submit">Submit Request</button>
+                    </fieldset>
+                </form>
+                <p class="form-success" id="form-success" role="status" hidden></p>
+            </div>
+
+            <aside class="order-aside" aria-labelledby="saved-heading">
+                <h2 id="saved-heading">Your Saved Favorites</h2>
+                <p>Select one to add it to your request.</p>
+                <ul class="favorites-list" id="order-favorites"></ul>
+
+                <h2>Bakery Information</h2>
+                <p>
+                    Contact North Star Bakery for current hours, location information,
+                    product availability, and pre-order pickup details.
+                </p>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+        <p>Freshly baked for our community.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
